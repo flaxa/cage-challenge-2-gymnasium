@@ -1,5 +1,15 @@
+
+# <img style="vertical-align:middle" src="./images/flaxa_zoom.png" width="30"  alt=""/> Gymnasium Compatibility Notes
+
+This fork is a tweak of the TTCP CAGE Challenge 2 to make it compatible with Gymnasium instead of the deprecated Gym.
+
+
+***
+
 # TTCP CAGE Challenge 2
 ![Banner](./images/TTCP-Logo-small.png) ![Banner](./images/CAGE-Logo-small.png)
+
+
 
 # Leader Board (final)
 We are pleased to announce the final results for the TTCP CAGE Challenge 2 in the table below.

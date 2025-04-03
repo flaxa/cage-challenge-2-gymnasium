@@ -1,5 +1,5 @@
 import numpy as np
-from gym import spaces, Env
+from gymnasium import spaces, Env
 from typing import Union, List
 from prettytable import PrettyTable
 
@@ -28,13 +28,13 @@ class OpenAIGymWrapper(Env, BaseWrapper):
         result.observation = self.observation_change(result.observation)
         result.action_space = self.action_space_change(result.action_space)
         info = vars(result)
-        return np.array(result.observation), result.reward, result.done, info
+        return np.array(result.observation,dtype=np.float32), result.reward, False, result.done, info
 
-    def reset(self, agent=None):
+    def reset(self, agent=None, seed=None, options=None):
         result = self.env.reset(self.agent_name)
         result.action_space = self.action_space_change(result.action_space)
         result.observation = self.observation_change(result.observation)
-        return np.array(result.observation)
+        return np.array(result.observation,dtype=np.float32), {}
 
     def render(self):
         # TODO: If FixedFlatWrapper it will error out!
